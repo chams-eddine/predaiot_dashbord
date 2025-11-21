@@ -1,55 +1,59 @@
-# main.py - الإطلاق العالمي الرسمي – 22 نوفمبر 2025
+# main.py – EDE v3.0 Economic Decision Engine – Global Launch Nov 22, 2025
 import streamlit as st
 import pandas as pd
 import plotly.express as px
 
 st.set_page_config(
-    page_title="EDE v3.0 – أول محرك قرار اقتصادي كوانتي عربي",
+    page_title="EDE v3.0 – World's First Arabic Quantum Economic Decision Engine",
     layout="wide",
     initial_sidebar_state="expanded"
 )
 
-st.title("محرك القرار الاقتصادي الكوانتي v3.0")
-st.markdown("### أول Economic Decision Engine عربي في التاريخ – من 2023 إلى 2025")
-st.success("المؤسس والمطور الوحيد من أول سطر في 2023: أنت – كل الحقوق محفوظة © 2025")
+# Hero Section
+st.title("EDE v3.0 – Economic Decision Engine")
+st.markdown("### World's First Arabic-Built Quantum-Powered Economic Decision Engine")
+st.success("**Founder & Solo Developer (2023–2025):** You – Full ownership © 2025")
 
-# البيانات المالية (مضمونة بدون أي ملف خارجي)
+# Financial Metrics
 data = {
-    "السنة": [2025, 2026, 2027, 2028, 2029],
-    "الإيرادات (جنيه إسترليني)": [2500000, 6800000, 12500000, 19800000, 28500000],
-    "صافي الربح (جنيه إسترليني)": [700000, 2600000, 5300000, 9000000, 13300000],
-    "الكاش التراكمي (جنيه إسترليني)": [700000, 3300000, 8600000, 17600000, 30900000],
-    "عدد الموظفين": [45, 85, 140, 220, 310]
+    "Year": [2025, 2026, 2027, 2028, 2029],
+    "Revenue (£M)": [2.5, 6.8, 12.5, 19.8, 28.5],
+    "Net Profit (£M)": [0.7, 2.6, 5.3, 9.0, 13.3],
+    "Cumulative Cash (£M)": [0.7, 3.3, 8.6, 17.6, 30.9],
+    "Headcount": [45, 85, 140, 220, 310]
 }
 df = pd.DataFrame(data)
 
 col1, col2, col3, col4 = st.columns(4)
 with col1:
-    st.metric("إجمالي الإيرادات في 5 سنوات", "£70,100,000")
+    st.metric("5-Year Total Revenue", "£70.1M")
 with col2:
-    st.metric("الكاش التراكمي السنة 5", "£30,900,000")
+    st.metric("Year 5 Cumulative Cash", "£30.9M")
 with col3:
-    st.metric("صافي الربح السنة 5", "£13,300,000")
+    st.metric("Year 5 Net Profit", "£13.3M")
 with col4:
-    st.metric("عدد الموظفين السنة 5", "310")
+    st.metric("Year 5 Headcount", "310")
 
-st.plotly_chart(px.bar(df, x="السنة", y="الإيرادات (جنيه إسترليني)", title="تطور الإيرادات عبر 5 سنوات", color="السنة"), use_container_width=True)
-st.plotly_chart(px.line(df, x="السنة", y="صافي الربح (جنيه إسترليني)", title="صافي الربح السنوي", markers=True), use_container_width=True)
-st.plotly_chart(px.area(df, x="السنة", y="الكاش التراكمي (جنيه إسترليني)", title="الكاش التراكمي – من الصفر إلى 30.9 مليون جنيه"), use_container_width=True)
+# Charts
+st.plotly_chart(px.bar(df, x="Year", y="Revenue (£M)", title="Revenue Growth Trajectory", color="Year"), use_container_width=True)
+st.plotly_chart(px.line(df, x="Year", y="Net Profit (£M)", title="Net Profit Evolution", markers=True), use_container_width=True)
+st.plotly_chart(px.area(df, x="Year", y="Cumulative Cash (£M)", title="Cumulative Cash Flow – Zero to £30.9M"), use_container_width=True)
 
+# Historical Proof
 st.markdown("---")
-st.subheader("الرحلة التاريخية – من 2023 إلى 2025")
+st.subheader("Journey: From 2023 to Global Launch 2025")
 
 colA, colB = st.columns(2)
 with colA:
-    st.image("https://i.imgur.com/removed-for-privacy1.jpg", caption="v1.0 – حزمة التنفيذ من 2023")
+    st.image("https://i.imgur.com/YOUR_V1_LINK.jpg", caption="v1.0 Core Engine – First commit 2023")
 with colB:
-    st.image("https://i.imgur.com/removed-for-privacy2.jpg", caption="v2.0 – Economic Engine الاقتصادي الكوانتي 2025")
+    st.image("https://i.imgur.com/YOUR_V2_LINK.jpg", caption="v2.0 Economic Engine – Full Arabic Architecture 2025")
 
+# Live Proof
 st.markdown("---")
-st.subheader("الإنجازات الحية – اليوم 22 نوفمبر 2025")
-st.success("AWS Glue Job: EDE_Quantum_Classifier_Daily → **Succeeded** يوميًا")
-st.success("الداشبورد شغال الآن على الإنترنت العالمي 24/7")
+st.subheader("Live Production Systems – November 22, 2025")
+st.success("AWS Glue Job: EDE_Quantum_Classifier_Daily → **Succeeded daily**")
+st.success("Live Global Dashboard → 24/7 at current URL")
 st.balloons()
 
-st.caption("© 2025 – أول مشروع عربي كوانتي-اقتصادي موثق من 2023 إلى 2025")
+st.caption("© 2025 – First fully Arabic-developed Quantum Economic Decision Engine | From bedroom in 2023 to global stage in 2025")
