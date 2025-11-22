@@ -108,7 +108,7 @@ with col_text:
     st.success("+15% Revenue Uplift – **Verified & Documented**")
 
 # زر التحميل الرسمي (إنجليزي + أخضر فاخر)
-pdf_url = "https://drive.google.com/file/d/1lW6YJJaUnLJb3NyJuPW4D_tx6RnVYfTa/view?usp=drive_link"
+pdf_url = "https://docs.google.com/presentation/d/1A2-3oLQSTlYm6YDd9ydvps-5Q8wCv8VE/edit?usp=drive_link&ouid=108893698254565278058&rtpof=true&sd=true"
 
 st.markdown(f'''
 <div style="text-align: center; margin: 40px 0;">
