@@ -1,105 +1,103 @@
-# main.py – Predaiot LLC Official Global Website (22 Nov 2025)
+# main.py – Predaiot EDE v3.0 – Gold Text Edition (Perfect on Dark Background)
 import streamlit as st
 import pandas as pd
 import plotly.express as px
 
-# Configuration
-st.set_page_config(page_title="Predaiot – Profit-Driven Industrial AI", page_icon="https://i.imgur.com/MZGE157.jpeg", layout="wide")
+st.set_page_config(
+    page_title="Predaiot – EDE v3.0",
+    page_icon="https://i.imgur.com/MZGE157.jpeg",
+    layout="wide"
+)
 
-# Full Background + Gold Text CSS
+# خلفية + نصوص ذهبي فاخر + ظل أسود
 st.markdown("""
 <style>
-    .stApp {background: url("https://i.imgur.com/b1lYZqw.jpeg") center fixed; background-size: cover;}
-    .block-container {background: rgba(5,10,30,0.92); backdrop-filter: blur(12px); border-radius: 20px; padding: 2rem; margin: 1.5rem 0;}
-    h1,h2,h3,h4,p,span,div,label {color: #FFD700 !important; text-shadow: 2px 2px 6px rgba(0,0,0,0.9);}
-    .stMetric {border-left: 6px solid #FFD700; background: rgba(255,215,0,0.15);}
-    .footer {text-align:center; padding:3rem; color:#FFD700; font-size:1.3rem;}
+    .stApp {
+        background: url("https://i.imgur.com/b1lYZqw.jpeg") no-repeat center center fixed;
+        background-size: cover;
+    }
+    .block-container, .css-1d391kg > div {
+        background: rgba(5, 10, 30, 0.88) !important;
+        backdrop-filter: blur(10px);
+        border-radius: 18px;
+        padding: 2rem;
+        margin: 1rem 0;
+    }
+    /* كل النصوص ذهبي فاخر مع ظل أسود */
+    h1, h2, h3, h4, h5, h6, p, div, span, label, .stMarkdown {
+        color: #FFD700 !important;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.9) !important;
+        font-weight: 600 !important;
+    }
+    .stMetric > div > div:first-child {color: #FFD700 !important;}
+    .stMetric > div > div:last-child {color: #FFF !important; font-size: 1.8rem !important;}
+    .stMetric {border-left: 6px solid #FFD700 !important; background: rgba(255,215,0,0.15) !important;}
+    .stSuccess {background: linear-gradient(90deg, #FFD700, #FFA500); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
+    .footer {text-align: center; padding: 3rem; color: #FFD700; font-size: 1.3rem; text-shadow: 2px 2px 6px black;}
 </style>
 """, unsafe_allow_html=True)
 
-# Hero Section
-col1, col2 = st.columns([1,2])
+# Header
+col1, col2 = st.columns([1, 5])
 with col1:
-    st.image("https://i.imgur.com/MZGE157.jpeg", width=280)
+    st.image("https://i.imgur.com/MZGE157.jpeg", width=220)
 with col2:
-    st.title("Predaiot")
-    st.markdown("### Profit-Driven Industrial Intelligence")
-    st.success("Patent Pending • +15% Revenue Uplift Verified by Muscat Energy (Oman)")
+    st.title("Predaiot – EDE v3.0")
+    st.markdown("### World's First Arabic-Built Quantum Economic Decision Engine")
+    st.success("Patent Pending – Official Filing in Progress")
 
-# --- Leadership Section (Integrated Full Bios) ---
-st.markdown("---")
-st.subheader("Leadership & Founders")
+# Founder Info
+st.markdown("""
+**Chams Eddine Madi**  
+Founder & CEO • Predaiot LLC  
+Registered in Muscat, Sultanate of Oman  
+Email: al.shams.invest@gmail.com • Phone: +968 7411 4028
+""")
 
-# Founder: Chams Eddine Madi (Image Link Updated)
-st.markdown("#### Founder & CEO – Chams Eddine Madi")
-col_chams_img, col_chams_bio = st.columns([1, 4])
-with col_chams_img:
-    st.image("https://i.imgur.com/VtGeq0W.jpeg", width=250, caption="Chams Eddine Madi – Founder & CEO, Systems Architect")
-with col_chams_bio:
-    st.markdown("""
-    **Chams Eddine Madi** is a deep-tech entrepreneur and visionary systems architect with over a decade of early hands-on experience in intelligent automation, data systems, and applied artificial intelligence. Unlike conventional founders who enter technology through formal pathways, Chams’ journey began organically, through real-world industrial problems that demanded real solutions.
-    
-    His earliest exposure to the energy sector began in **2012**, when his family operated a solar panel cleaning and maintenance business. The critical question customers frequently raised—**“Why is energy efficiency still dropping even after cleaning?”**—sparked Chams’ obsession with understanding the hidden, unseen layers behind system inefficiencies.
-    
-    Over the next decade, he continuously refined this thinking by studying system intelligence, decision theory, economic optimization, and autonomous logic frameworks. This journey ultimately led to the creation of PREDAIOT’s **Economic Decision Engine™**, a system that does not simply monitor or predict outcomes, but actively prescribes the most profitable decision an industrial asset can make in real time.
-    
-    As CEO, Chams leads product architecture, AI logic design, and long-term technological vision. His philosophy is simple: **Data without decision is noise. Decision without profitability is waste.**
-    """)
-st.markdown("---")
-
-# Co-Founder: Sumaiya (Image Link Updated)
-st.markdown("#### Co-Founder & Strategy – Sumaiya")
-col_sumaiya_img, col_sumaiya_bio = st.columns([1, 4])
-with col_sumaiya_img:
-    st.image("https://i.imgur.com/BUuOchX.jpeg", width=250, caption="Sumaiya – Co-Founder & Strategy, GCC Market Specialist")
-with col_sumaiya_bio:
-    st.markdown("""
-    **Sumaiya** is a strategic business architect with deep experience across the GCC markets, known for transforming early-stage technologies into scalable commercial opportunities. Her journey is rooted in execution, network intelligence, and a rare ability to connect technology with market realities.
-    
-    She has worked extensively inside live industrial ecosystems, engaging directly with energy, infrastructure, and industrial stakeholders across Oman and wider GCC. Her career has always been centered around one core strength: **building pathways where none exist.**
-    
-    At PREDAIOT, Sumaiya leads:
-    * Business strategy
-    * Investor positioning
-    * Partnerships and expansion
-    * Market penetration across GCC and India
-    
-    She acts as the bridge between deep technology and commercial reality. Her strength lies in simplifying complex systems into powerful business stories and translating visionary technology into measurable commercial outcomes. Her long-term vision for PREDAIOT is to make it not just a product company, but a movement, redefining how industries think about intelligence, profitability, and autonomous decision-making.
-    
-    Her working philosophy is rooted in realism, speed, and precision. She believes: **The future belongs to companies that don’t react, but decide in advance.**
-    """)
-st.markdown("---")
-
-# Proof of Value
-st.image("https://i.imgur.com/8vK3k9P.png", use_column_width=True)
-pdf_url = "https://drive.google.com/uc?export=download&id=1hL3z1e9v8mK8z9xY7tR5uW2qP9oN6fF_"
-st.markdown(f'''
-<div style="text-align:center; margin:60px 0;">
-    <a href="{pdf_url}" target="_blank">
-        <button style="background:linear-gradient(90deg,#00ff9d,#00d4ff); color:black; font-size:28px; font-weight:bold; padding:22px 90px; border:none; border-radius:20px; box-shadow:0 12px 40px rgba(0,255,157,0.6);">
-            Download Official Report<br><span style="font-size:20px;">+15% Revenue Uplift Verified by Muscat Energy</span>
-        </button>
-    </a>
-</div>
-''', unsafe_allow_html=True)
-
-# Financial Snapshot
-st.markdown("---")
-st.subheader("5-Year Financial Outlook")
-data = {"Year":[2025,2026,2027,2028,2029],"Revenue (£M)":[2.5,6.8,12.5,19.8,28.5],"Cumulative Cash (£M)":[0.7,3.3,8.6,17.6,30.9]}
+# Financial Metrics
+data = {"Year": [2025,2026,2027,2028,2029],
+        "Revenue (£M)": [2.5,6.8,12.5,19.8,28.5],
+        "Net Profit (£M)": [0.7,2.6,5.3,9.0,13.3],
+        "Cumulative Cash (£M)": [0.7,3.3,8.6,17.6,30.9],
+        "Headcount": [45,85,140,220,310]}
 df = pd.DataFrame(data)
+
 c1,c2,c3,c4 = st.columns(4)
 with c1: st.metric("5-Year Revenue", "£70.1M")
-with c2: st.metric("Year-5 Cash", "£30.9M")
-with c3: st.metric("Year-5 Profit", "£13.3M")
+with c2: st.metric("Year 5 Cash", "£30.9M")
+with c3: st.metric("Year 5 Profit", "£13.3M")
 with c4: st.metric("Team 2029", "310")
-st.plotly_chart(px.area(df, x="Year", y="Cumulative Cash (£M)", color_discrete_sequence=["#FFD700"]), use_container_width=True)
 
-# Footer
+# Charts (ذهبي + ألوان قوية)
+chart_config = {"displayModeBar": False}
+st.plotly_chart(px.area(df, x="Year", y="Cumulative Cash (£M)", title="Cumulative Cash – Zero to £30.9M",
+                        color_discrete_sequence=["#FFD700"]), use_container_width=True, config=chart_config)
+st.plotly_chart(px.bar(df, x="Year", y="Revenue (£M)", title="Revenue Growth Trajectory",
+                       color_discrete_sequence=["#FFA500", "#FFD700", "#FF8C00", "#FF6347", "#FF4500"]), 
+                       use_container_width=True, config=chart_config)
+
+# Journey
+st.markdown("---")
+st.subheader("From Bedroom 2023 → Global Company 2025")
+colA, colB = st.columns(2)
+with colA:
+    st.image("https://i.imgur.com/2ujGoG4.png", caption="v1.0 – First Arabic Core 2023")
+    st.image("https://i.imgur.com/4P5Q48d.png", caption="Project Structure")
+with colB:
+    st.image("https://i.imgur.com/dzQsCaZ.png", caption="v2.0 Economic Engine 2025")
+    st.image("https://i.imgur.com/BvHPeYs.png", caption="Microservices Architecture")
+
+st.image("https://i.imgur.com/eCyISer.png", use_column_width=True)
+st.image("https://i.imgur.com/H52AhVg.png", use_column_width=True)
+
+st.success("AWS Glue Job → Running Daily • Live Dashboard 24/7 • Patent Pending")
+st.balloons()
+
+# Footer ذهبي
 st.markdown("""
 <div class="footer">
-    © 2025 Predaiot LLC – Registered in Muscat, Sultanate of Oman<br>
-    al.shams.invest@gmail.com • +968 7411 4028 • Patent Pending
+    © 2025 Predaiot LLC – Muscat, Sultanate of Oman<br>
+    Contact: al.shams.invest@gmail.com • +968 7411 4028<br>
+    <b>Patent Pending • All rights reserved</b>
 </div>
 """, unsafe_allow_html=True)
-st.balloons()
