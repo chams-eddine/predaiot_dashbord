@@ -1,5 +1,5 @@
 import streamlit as st
-st.image("https://i.imgur.com/8vK3k9P.png", use_column_width=True)
+st.image("[img]https://i.imgur.com/iAlxU7D.mp4[/img]", use_column_width=True)
 st.success("+15% Revenue Uplift – Independently Verified by Muscat Energy (Oman)")
 
 pdf = "https://drive.google.com/uc?export=download&id=1hL3z1e9v8mK8z9xY7tR5uW2qP9oN6fF_"
