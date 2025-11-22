@@ -1,48 +1,47 @@
 # main.py – Predaiot EDE v3.0 – Official Global Dashboard
-# Registered Company: Predaiot LLC, Muscat, Sultanate of Oman
-# Founder & CEO: Chams Eddine Madi
+# Predaiot LLC – Registered in Muscat, Sultanate of Oman
+# Founder & CEO: Chams Eddine Madi – Patent Pending
 
 import streamlit as st
 import pandas as pd
 import plotly.express as px
 
-# ====================== PAGE CONFIG & CUSTOM CSS ======================
+# Page config + logo as favicon
 st.set_page_config(
     page_title="Predaiot – EDE v3.0 Economic Decision Engine",
-    page_icon="https://i.imgur.com/YOUR_LOGO_LINK.png",  # حط رابط اللوقو هنا بعد الرفع
-    layout="wide",
-    initial_sidebar_state="expanded"
+    page_icon="https://i.imgur.com/MZGE157.jpeg",
+    layout="wide"
 )
 
-# Custom CSS – ألوان Predaiot الرسمية (نفس اللوقو)
+# Predaiot Official Colors (من اللوقو بالظبط)
 st.markdown("""
 <style>
-    .css-1d391kg {background: #0a1a2f;}  /* Dark navy background */
-    .css-1v0mbdj {color: #00ff9d !important;} /* Accent green */
-    .stMetric > div {background: rgba(10,26,47,0.8); border-left: 5px solid #00ff9d;}
-    .stSuccess {background: linear-gradient(90deg, #00ff9d, #00d4ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
-    .footer {text-align: center; padding: 2rem; background: #0a1a2f; color: #00d4ff; font-size: 1rem;}
+    .css-1d391kg {background: #0a0e1f;}
+    h1, h2, h3 {color: #00ff9d !important;}
+    .stMetric > div {background: rgba(10,14,31,0.95); border-left: 6px solid #00ff9d; border-radius: 12px; padding: 10px;}
+    .stSuccess {background: linear-gradient(90deg, #00d4ff, #00ff9d); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: bold; font-size: 1.3rem;}
+    .footer {text-align: center; padding: 3rem; background: #0a0e1f; color: #00d4ff; margin-top: 4rem; font-size: 1.2rem;}
 </style>
 """, unsafe_allow_html=True)
 
-# ====================== HEADER WITH LOGO ======================
-col1, col2 = st.columns([1, 4])
+# Header + Official Logo
+col1, col2 = st.columns([1, 5])
 with col1:
-    st.image("https://i.imgur.com/YOUR_PREDAIOT_LOGO.png", width=180)  # ارفع اللوقو على imgur وحط الرابط هنا
+    st.image("https://i.imgur.com/MZGE157.jpeg", width=240)
 with col2:
     st.title("Predaiot – EDE v3.0")
-    st.markdown("### World's First Arabic Quantum Economic Decision Engine")
-    st.success("**Patent Pending** – Official filing in progress")
+    st.markdown("### World's First Arabic-Built Quantum Economic Decision Engine")
+    st.success("Patent Pending – Official Filing in Progress")
 
-# ====================== FOUNDER & COMPANY INFO ======================
-st.markdown(f"""
+# Founder & Company Official Info
+st.markdown("""
 **Chams Eddine Madi**  
 Founder & CEO • Predaiot LLC  
 Registered in Muscat, Sultanate of Oman  
-Email: al.shams.invest@gmail.com | Phone: +968 7411 4028
+Email: al.shams.invest@gmail.com • Phone: +968 7411 4028
 """)
 
-# ====================== FINANCIAL METRICS ======================
+# Financial Projections
 data = {
     "Year": [2025, 2026, 2027, 2028, 2029],
     "Revenue (£M)": [2.5, 6.8, 12.5, 19.8, 28.5],
@@ -56,36 +55,41 @@ c1, c2, c3, c4 = st.columns(4)
 with c1: st.metric("5-Year Revenue", "£70.1M")
 with c2: st.metric("Year 5 Cash", "£30.9M")
 with c3: st.metric("Year 5 Profit", "£13.3M")
-with c4: st.metric("Team Size (2029)", "310")
+with c4: st.metric("Team 2029", "310")
 
-# ====================== CHARTS ======================
-st.plotly_chart(px.area(df, x="Year", y="Cumulative Cash (£M)", 
-                        title="Cumulative Cash Flow – Zero to £30.9M", 
+# Charts
+st.plotly_chart(px.area(df, x="Year", y="Cumulative Cash (£M)", title="Cumulative Cash – Zero to £30.9M",
                         color_discrete_sequence=["#00ff9d"]), use_container_width=True)
 
-st.plotly_chart(px.bar(df, x="Year", y="Revenue (£M)", 
-                       title="Revenue Growth", color="Year",
+st.plotly_chart(px.bar(df, x="Year", y="Revenue (£M)", title="Revenue Growth Trajectory",
                        color_discrete_sequence=px.colors.sequential.Plasma_r), use_container_width=True)
 
-# ====================== HISTORICAL PROOF ======================
+# Historical Journey – كل الصور اللي بعتها
 st.markdown("---")
-st.subheader("Journey: From 2023 to 2025")
+st.subheader("Journey: From Bedroom in 2023 → Global Company in 2025")
+
 colA, colB = st.columns(2)
 with colA:
-    st.image("https://i.imgur.com/v1_screenshot.jpg", caption="v1.0 – First commit 2023 (Arabic)")
+    st.image("https://i.imgur.com/2ujGoG4.png", caption="v1.0 – First Arabic Core Engine 2023")
+    st.image("https://i.imgur.com/4P5Q48d.png", caption="Project Files & Architecture")
 with colB:
-    st.image("https://i.imgur.com/v2_screenshot.jpg", caption="v2.0 Economic Engine – Full Arabic Architecture 2025")
+    st.image("https://i.imgur.com/dzQsCaZ.png", caption="v2.0 Economic Engine – Full Arabic Design 2025")
+    st.image("https://i.imgur.com/BvHPeYs.png", caption="Graph + Microservices Architecture")
 
-# ====================== LIVE STATUS ======================
-st.success("AWS Glue Job: EDE_Quantum_Classifier_Daily → Running daily")
-st.success("Live Global Dashboard → 24/7")
+st.image("https://i.imgur.com/eCyISer.png", caption="v2.0 Detailed View")
+st.image("https://i.imgur.com/H52AhVg.png", caption="Execution Commands & Testing")
 
-# ====================== FOOTER ======================
-st.markdown(f"""
-<div class="footer">
-    © 2025 Predaiot LLC • Registered in Muscat, Sultanate of Oman • Patent Pending<br>
-    <b>Contact:</b> al.shams.invest@gmail.com • +968 7411 4028
-</div>
-""", unsafe_allow_html=True)
+# Live Status
+st.success("AWS Glue Job: EDE_Quantum_Classifier_Daily → Running & Succeeding daily")
+st.success("Live Global Dashboard → 24/7 – Patent Pending")
 
 st.balloons()
+
+# Official Footer
+st.markdown("""
+<div class="footer">
+    © 2025 Predaiot LLC – Registered in Muscat, Sultanate of Oman<br>
+    <b>Contact:</b> al.shams.invest@gmail.com • +968 7411 4028<br>
+    <b>Patent Pending</b> • All rights reserved
+</div>
+""", unsafe_allow_html=True)
