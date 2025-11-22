@@ -4,7 +4,7 @@ st.title("Leadership Team")
 
 col1, col2 = st.columns([1,2])
 with col1:
-    st.image("https://i.imgur.com/yWgyEUx.png", use_column_width=True)
+    st.image("[img]https://i.imgur.com/Nghaveq.jpeg[/img]", use_column_width=True)
 with col2:
     st.markdown("""
     ### Chams Eddine Madi  
@@ -28,7 +28,7 @@ st.divider()
 
 col1, col2 = st.columns([1,2])
 with col1:
-    st.image("https://i.imgur.com/BNe38YA.jpeg", use_column_width=True)
+    st.image("[img]https://i.imgur.com/TKRn5oG.jpeg[/img]", use_column_width=True)
 with col2:
     st.markdown("""
     ### Sumaiya  
