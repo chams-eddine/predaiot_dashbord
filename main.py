@@ -93,6 +93,46 @@ st.image("https://i.imgur.com/H52AhVg.png", use_column_width=True)
 st.success("AWS Glue Job → Running Daily • Live Dashboard 24/7 • Patent Pending")
 st.balloons()
 
+# Proof of Value Section – English + Beautiful Download Button
+st.markdown("---")
+st.subheader("Independent Validation", anchor=False)
+
+col_img, col_text = st.columns([1, 2])
+with col_img:
+    st.image("https://i.imgur.com/your_new_15percent_image.png", use_column_width=True)  # الصورة اللي بعتها دلوقتي
+with col_text:
+    st.markdown("""
+    ### PREDAIOT: The AI That Unlocked **15% Revenue** on Solar Assets  
+    **Independent Validation by Muscat Energy (Oman)**  
+    """)
+    st.success("+15% Revenue Uplift – **Verified & Documented**")
+
+# زر التحميل الرسمي (إنجليزي + أخضر فاخر)
+pdf_url = "https://drive.google.com/file/d/1lW6YJJaUnLJb3NyJuPW4D_tx6RnVYfTa/view?usp=drive_link"
+
+st.markdown(f'''
+<div style="text-align: center; margin: 40px 0;">
+    <a href="{pdf_url}" target="_blank">
+        <button style="
+            background: linear-gradient(90deg, #00ff9d, #00d4ff);
+            color: black;
+            font-size: 22px;
+            font-weight: bold;
+            padding: 18px 50px;
+            border: none;
+            border-radius: 16px;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(0,255,157,0.4);
+            transition: all 0.3s;
+        "
+        onMouseOver="this.style.transform='scale(1.05)'"
+        onMouseOut="this.style.transform='scale(1)'">
+            Download Official Report – +15% Revenue Uplift (PDF)
+        </button>
+    </a>
+</div>
+''', unsafe_allow_html=True)
+
 # Footer ذهبي
 st.markdown("""
 <div class="footer">
