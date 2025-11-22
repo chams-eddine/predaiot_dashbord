@@ -3,9 +3,10 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
+# Configuration
 st.set_page_config(page_title="Predaiot – Profit-Driven Industrial AI", page_icon="https://i.imgur.com/MZGE157.jpeg", layout="wide")
 
-# Full Background + Gold Text
+# Full Background + Gold Text CSS
 st.markdown("""
 <style>
     .stApp {background: url("https://i.imgur.com/b1lYZqw.jpeg") center fixed; background-size: cover;}
@@ -25,29 +26,51 @@ with col2:
     st.markdown("### Profit-Driven Industrial Intelligence")
     st.success("Patent Pending • +15% Revenue Uplift Verified by Muscat Energy (Oman)")
 
-# Team Section
+# --- Leadership Section (Integrated Full Bios) ---
 st.markdown("---")
-st.subheader("Leadership")
-col_a, col_b = st.columns(2)
-with col_a:
-    st.image("https://i.imgur.com/YOUR_CHAMS_PHOTO_DIRECT_LINK.jpeg", width=300, caption="Chams Eddine Madi – Founder & CEO")
+st.subheader("Leadership & Founders")
+
+# Founder: Chams Eddine Madi (Image Link Updated)
+st.markdown("#### Founder & CEO – Chams Eddine Madi")
+col_chams_img, col_chams_bio = st.columns([1, 4])
+with col_chams_img:
+    st.image("https://i.imgur.com/VtGeq0W.jpeg", width=250, caption="Chams Eddine Madi – Founder & CEO, Systems Architect")
+with col_chams_bio:
     st.markdown("""
-    **Chams Eddine Madi**  
-    Founder & CEO • Systems Architect  
-    10+ years building real-time profit-optimization engines.  
-    Started solving solar degradation problems in 2012 → created the Economic Decision Engine™ in 2023.
+    **Chams Eddine Madi** is a deep-tech entrepreneur and visionary systems architect with over a decade of early hands-on experience in intelligent automation, data systems, and applied artificial intelligence. Unlike conventional founders who enter technology through formal pathways, Chams’ journey began organically, through real-world industrial problems that demanded real solutions.
+    
+    His earliest exposure to the energy sector began in **2012**, when his family operated a solar panel cleaning and maintenance business. The critical question customers frequently raised—**“Why is energy efficiency still dropping even after cleaning?”**—sparked Chams’ obsession with understanding the hidden, unseen layers behind system inefficiencies.
+    
+    Over the next decade, he continuously refined this thinking by studying system intelligence, decision theory, economic optimization, and autonomous logic frameworks. This journey ultimately led to the creation of PREDAIOT’s **Economic Decision Engine™**, a system that does not simply monitor or predict outcomes, but actively prescribes the most profitable decision an industrial asset can make in real time.
+    
+    As CEO, Chams leads product architecture, AI logic design, and long-term technological vision. His philosophy is simple: **Data without decision is noise. Decision without profitability is waste.**
     """)
-with col_b:
-    st.image("https://i.imgur.com/YOUR_SUMAIYA_PHOTO_DIRECT_LINK.jpeg", width=300, caption="Sumaiya – Co-Founder & Strategy")
+st.markdown("---")
+
+# Co-Founder: Sumaiya (Image Link Updated)
+st.markdown("#### Co-Founder & Strategy – Sumaiya")
+col_sumaiya_img, col_sumaiya_bio = st.columns([1, 4])
+with col_sumaiya_img:
+    st.image("https://i.imgur.com/BUuOchX.jpeg", width=250, caption="Sumaiya – Co-Founder & Strategy, GCC Market Specialist")
+with col_sumaiya_bio:
     st.markdown("""
-    **Sumaiya**  
-    Co-Founder • Strategy & Growth  
-    GCC market specialist. Turns deep-tech into commercial reality.  
-    Leads investor relations, partnerships, and regional expansion.
+    **Sumaiya** is a strategic business architect with deep experience across the GCC markets, known for transforming early-stage technologies into scalable commercial opportunities. Her journey is rooted in execution, network intelligence, and a rare ability to connect technology with market realities.
+    
+    She has worked extensively inside live industrial ecosystems, engaging directly with energy, infrastructure, and industrial stakeholders across Oman and wider GCC. Her career has always been centered around one core strength: **building pathways where none exist.**
+    
+    At PREDAIOT, Sumaiya leads:
+    * Business strategy
+    * Investor positioning
+    * Partnerships and expansion
+    * Market penetration across GCC and India
+    
+    She acts as the bridge between deep technology and commercial reality. Her strength lies in simplifying complex systems into powerful business stories and translating visionary technology into measurable commercial outcomes. Her long-term vision for PREDAIOT is to make it not just a product company, but a movement, redefining how industries think about intelligence, profitability, and autonomous decision-making.
+    
+    Her working philosophy is rooted in realism, speed, and precision. She believes: **The future belongs to companies that don’t react, but decide in advance.**
     """)
+st.markdown("---")
 
 # Proof of Value
-st.markdown("---")
 st.image("https://i.imgur.com/8vK3k9P.png", use_column_width=True)
 pdf_url = "https://drive.google.com/uc?export=download&id=1hL3z1e9v8mK8z9xY7tR5uW2qP9oN6fF_"
 st.markdown(f'''
